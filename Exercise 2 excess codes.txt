@@ -1,0 +1,51 @@
+This is for edit string function
+// if(newValues.length() < 3 || newValues.length() > 3){
+                        //     System.out.println("Invalid Input! Please try again");
+                        //     editString();
+                        // } else{
+                        //     this.stringArray.get(rows).put(entry.getKey(), newValues);
+                        //     System.out.println("The value is now " + newValues);
+                        // }
+
+
+
+public void addString(ArrayList<HashMap<String, String>> stringArray){
+        int inputRows;
+        // int inputColumns;
+        // int searchRow;
+
+        // String choice;
+        // System.out.println("A - For Adding rows");
+        // System.out.println("B - For Adding columns in an existing row");
+        // System.out.println("Please Enter your choice for adding: ");
+        // choice = sc.nextLine();
+
+        //if (choice.toUpperCase().equals("A")){
+            System.out.println("How many rows would you like to add: ");
+            inputRows = sc.nextInt();
+
+            for (int rows=0; rows < inputRows; rows++){
+            Map <String, String> map = new HashMap<>();
+            for (int columns=0; columns < this.columns; columns++){
+                int newRows = this.rows + inputRows;
+                map.put(newRows + ","+ columns, generateString());
+                }
+            this.stringArray.add((HashMap<String, String>) map);
+            }
+
+         //} //else if (choice.toUpperCase().equals("B")){
+        //     System.out.println("Enter the row to add columns in: ");
+        //     searchRow = sc.nextInt(); 
+        //     System.out.println("Enter the number of columns you want to add: ");
+        //     inputColumns = sc.nextInt();
+            
+        //     for (int rows=0; rows < this.stringArray.size(); rows++){
+        //         Map <String, String> map = new HashMap<>();
+        //         for(columns = 0; columns < inputColumns; columns++){
+        //             int newColumns = this.columns + inputColumns;
+        //             map.put(rows + "," + newColumns, generateString());
+        //         }
+        //         this.stringArray.add((HashMap<String, String>) map);
+        //     }
+        // }
+    }
